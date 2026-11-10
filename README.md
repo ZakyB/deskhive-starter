@@ -137,3 +137,7 @@ Before pulling changes into an existing clone, stop the server and commit or sta
 ## Repository contents and portability
 
 Only source, documentation and pinned dependencies are tracked. .gitignore excludes .venv, caches, database files, .DS_Store and local IDE state. The included GitHub Actions workflow checks the original starter on Windows and macOS; its results are available in the repository's Actions tab.
+
+## M7 — Parsing XML and JSON with Python
+
+For the current branch `m7-xml-json`, see [M7-EXERCISES.md](M7-EXERCISES.md) for the labs and commands. M6 and earlier modules are pre-corrected.

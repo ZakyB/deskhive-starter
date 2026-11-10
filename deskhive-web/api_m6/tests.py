@@ -11,7 +11,7 @@ def payload(**kw):
     return data
 
 class SerializerBasicsTests(TestCase):
-    """M6 Lab 1 acceptance checks: plain serializers.Serializer."""
+    """Lab 1: serialization and deserialization using serializers.Serializer."""
 
     def test_plain_serializer_reads_real_space(self):
         from api_m6.serializers_intro import SpaceSnapshotSerializer
@@ -25,6 +25,7 @@ class SerializerBasicsTests(TestCase):
     def test_plain_serializer_validates_input_without_persisting(self):
         from decimal import Decimal
         from api_m6.serializers_intro import SpaceSnapshotSerializer
+        from spaces.models import Space
         count_before = Space.objects.count()
         data = {'code': 'new-desk', 'name': 'New desk', 'kind': 'desk',
                 'capacity': 2, 'hourly_rate': '13.50'}
@@ -43,7 +44,6 @@ class SerializerBasicsTests(TestCase):
         self.assertIn('kind', serializer.errors)
         self.assertIn('capacity', serializer.errors)
         self.assertIn('hourly_rate', serializer.errors)
-
 
 class SerializationTests(TestCase):
     def test_space_list_and_detail_use_orm(self):

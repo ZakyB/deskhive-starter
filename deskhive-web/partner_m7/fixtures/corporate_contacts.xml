@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<corporate_contacts>
+  <contact><full_name>Amira Cohen</full_name><email>amira@example.test</email></contact>
+  <contact><full_name>Leo Martin</full_name><email>leo@example.test</email></contact>
+</corporate_contacts>
